@@ -1,5 +1,6 @@
 import sys
-
+import os
+os.environ["SDL_VIDEODRIVER"] = "x11"
 import pygame
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
@@ -33,7 +34,7 @@ def main() -> None:
     print("Starting Asteroids")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
-    
+
     while True:
         log_state()
 

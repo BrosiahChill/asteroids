@@ -35,13 +35,22 @@ class Player(CircleShape):
         self.shoot_timer -= dt
         keys = pygame.key.get_pressed()
 
+        # for testing key inputs
+        # for key in range(len(keys)):
+        #     if keys[key]:
+        #         print(pygame.key.name(key))
+
         if keys[pygame.K_a]:
+            # print("a is pressed")
             self.rotate(-dt)
         if keys[pygame.K_d]:
+            # print("d is pressed")
             self.rotate(dt)
         if keys[pygame.K_w]:
+            # print("w is pressed")
             self.move(dt)
         if keys[pygame.K_s]:
+            # print("s is pressed")
             self.move(-dt)
         if keys[pygame.K_SPACE]:
             self.shoot()
